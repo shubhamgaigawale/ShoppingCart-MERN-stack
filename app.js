@@ -9,8 +9,6 @@ const authRoutes = require('./routes/auth');
 
 require('dotenv').config();
 
-//const mongodburl = config.MONGODB_URL
-
 //DB connection
 mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
@@ -30,8 +28,9 @@ app.use(cors());
 app.use("/api", authRoutes);
 
 
+
 //port 
-const port = process.env.PORT;
+const port = process.env.PORT || 8001;
 
 //starting service
 app.listen(port, () => {
