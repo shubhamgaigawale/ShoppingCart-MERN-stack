@@ -14,7 +14,7 @@ router.post("/signin", [
     check('password').isLength({ min: 6 }).withMessage('Password field is required')
 ], signin)
 
-router.get("/signout",  signout);
+router.get("/signout", signout);
 
 router.get("/test", isSignedIn, (req, res) => {
     res.json(req.auth)
