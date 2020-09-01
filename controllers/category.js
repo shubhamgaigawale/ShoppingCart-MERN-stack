@@ -10,7 +10,7 @@ exports.getCategoryById = (req, res, next, id) => {
       req.category = cate;
       next();
     });
-  };
+};
   
 exports.createCategory = (req, res) => {
     const category = new Category(req.body);
