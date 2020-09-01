@@ -4,7 +4,7 @@ const { isAdmin, isSignedIn, isAuthenticated } = require("../controllers/auth");
 const { getUserById } = require("../controllers/user");
 const { getProductById, createProduct, getProduct, getAllUniqueCategories, getAllProducts, photo, updateProduct, deleteProduct } = require("../controllers/product");
 
-//params
+//Params
 router.param("userId", getUserById);
 
 router.param("productId", getProductById);
